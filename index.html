@@ -1,6 +1,24 @@
+<!DOCTYPE html>
 <html>
 <head>
+<script src="http://travistidwell.com/jsencrypt/bin/jsencrypt.js"></script>
+<script>
+jsc = new JSEncrypt
+var dat = "f70nQRB1imKvhPqZTx4vsZRzfNmY1mlprbWxqR7T5Le5um9H5G9I8/PLkLQ7N47S3XSqT4lEmWa6c2oU5z0cGJTbNpyx0venHZpuLiJtS9l6vkWiT5L5hBh3znnq2v/uIRwuUXTdMvWOHu1DJFOfHpVcoaZK34gcv5snLcG9rvTnAHm9W/LgH6vpRu5JQABo7kqIO593XQbwKOo7Z9r6nfAnyOBPFOVpaxaWc5UhB42HB9LYaewBi5/eue3jS1RP3kC7dvVIsU3SySvy20hAaQSrvOkhlQjk0qnqv6qy9MFzCU3DGUMT8MJxQTEJBaOr/XaLQ3SDZt6BPIxdpuR4dBqlGf1XG1pyjCkJh0yrtqyQUZMSXd0MOuEG4XRT4dZmGPduK/7lEbMkNvaJwDpWtlVzHycj0ANtBAYyzgmgcXDV2120Ac+eWxItZmZC6YqNR5sgW1ZmpIHFTVuwc81wgxIlbmeUW8Mis3rp62UJ3bFAC+npiotP+4FoCALzZzXR6SMT3sVv4HYn9A/Y1TEGCT+VRXq1bAzd+NnKe3c3mlRSpRdAVfQtRSmHfr+P5oJYamm/NQ05AGdr0PDaaRDK4F6T8uiFVkc/U9FlcCtXjKaN7OHozT4wn8Rqf44fiD1qyPluO7kF40pN48KudOxfDgyXOOz5tTrpGRtQ2tbhYQk=";
+jsc.setPublicKey("MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAg1Ci4QJapOfsewb3KrMybL9vQ9WueaN8iBYRP/wtSgxAafE+7KY8mBc02i1qNEjaiTmQcivMeOzZIz/NE1HW66x6fY7l317USn/iyHtbf7/6Z6IlvzLnek6XRev8nFGkj2rKRR5b/RaOKDpZiWDCsgVSbT4JYDN5/3qGiVfqRhpfbblOkZ4mluhyWx/DFUxystoaRGDWIFvBRtES78WtPqzclx9i26MNu5PB70bJjc8ymS7vzakdaBY2kNaBCH2JI70VbATr8BxngYGAvt5duBNyvcF1XT5Uj7nkrEiW/6x24xCn7nK9bfMeLkQ9gNSZJ2tQMB9OU3d41yicOBQiQi1gfO4odBuFZCLY64Q8nAwb9ShEwu5oqc/Je+XyKA63M2f2a7gub/W8PEuiHbsWShpTk4B6tr3K2sGTzEGIqZ8f5pqfwuXPv7j20g8fMLOoxgTUh2ZQpNvgjD1ZaYILc/fGypxrn1NvSwXCiEib10yYhsBtPIyZl5qBe+qGvu4dnITYwss7lGbsrDA93rhGR2TfqBnwU1CdfmVWERjjWr/+mlHDcZ2qdfVRtnipBTZJkCxxYxuXBLhKXD23qSIPAheqyoqa1OitOv2xnG8DlHgIBbNDaM3Bu1TL4BLOxRPekNgMNib25TJOXd/inUGXwegxUnxpYNKxSleDn85iuR8CAwEAAQ==")
+
+alert(jsc.decrypt(dat));
+</script>
 </head>
 <body>
+<script>
+function dec() {
+	var txt = document.getElementById("1").value;
+    jsc.setPrivateKey(txt);
+    document.write(jsc.decrypt(dat));
+}
+</script>
+<textarea id="1"></textarea>
+<button onclick="dec();">decrypt</button>
 </body>
 </html>
